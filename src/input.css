@@ -1,3 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  header,
+  main,
+  footer {
+    @apply w-11/12 md:w-4/5 2xl:max-w-[1440px] mx-auto leading-7 font-lato;
+  }
+  h2,
+  h3 {
+    @apply text-drak text-3xl md:text-5xl font-extrabold;
+  }
+  p,
+  a {
+    @apply text-gray-400 font-medium;
+  }
+  a {
+    @apply text-light_color;
+  }
+}
+
+@layer components {
+  .btn-b {
+    @apply bg-primary-color font-medium text-[20px] py-5 px-8 text-light_color rounded-xl;
+  }
+}
+
+@layer utilities {
+  .bg-custom-image-1 {
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("images/banner1.png");
+  }
+  .bg-custom-image-2 {
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("images/banner2.png");
+  }
+  .bg-custom-image-3 {
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("images/banner3.png");
+  }
+  .bg-custom-image-4 {
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.1)
+      ),
+      url("images/banner4.png");
+  }
+}
