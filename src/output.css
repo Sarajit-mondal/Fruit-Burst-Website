@@ -1757,6 +1757,14 @@ a{
   margin-bottom: 2rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
 .flex{
   display: flex;
 }
@@ -1769,6 +1777,11 @@ a{
   display: none;
 }
 
+.size-5{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 .h-32{
   height: 8rem;
 }
@@ -1777,8 +1790,12 @@ a{
   height: 190px;
 }
 
-.h-\[80vh\]{
-  height: 80vh;
+.h-2{
+  height: 0.5rem;
+}
+
+.h-1{
+  height: 0.25rem;
 }
 
 .w-32{
@@ -1799,6 +1816,10 @@ a{
 
 .w-full{
   width: 100%;
+}
+
+.w-24{
+  width: 6rem;
 }
 
 .max-w-\[615px\]{
@@ -1823,8 +1844,8 @@ a{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -1857,6 +1878,14 @@ a{
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-12{
+  gap: 3rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .gap-x-3{
@@ -1905,6 +1934,16 @@ a{
   background-color: transparent;
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-drak{
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 18 18 / var(--tw-bg-opacity));
+}
+
 .bg-cover{
   background-size: cover;
 }
@@ -1915,6 +1954,14 @@ a{
 
 .p-10{
   padding: 2.5rem;
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .px-10{
@@ -2026,6 +2073,10 @@ a{
 }
 
 @media (min-width: 768px){
+  .md\:ml-auto{
+    margin-left: auto;
+  }
+
   .md\:flex{
     display: flex;
   }
@@ -2042,6 +2093,10 @@ a{
     height: 80vh;
   }
 
+  .md\:h-\[450px\]{
+    height: 450px;
+  }
+
   .md\:w-11{
     width: 2.75rem;
   }
@@ -2050,8 +2105,16 @@ a{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse{
+    flex-direction: row-reverse;
   }
 
   .md\:space-y-5 > :not([hidden]) ~ :not([hidden]){
@@ -2062,6 +2125,10 @@ a{
 
   .md\:text-left{
     text-align: left;
+  }
+
+  .md\:text-right{
+    text-align: right;
   }
 
   .md\:text-4xl{
@@ -2096,18 +2163,6 @@ a{
 
 .\[\&\>\*\]\:max-w-\[360px\]>*{
   max-width: 360px;
-}
-
-.\[\&\>\*\]\:space-y-10>* > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
-
-.\[\&\>\*\]\:space-y-5>* > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .\[\&\>\*\]\:space-y-8>* > :not([hidden]) ~ :not([hidden]){
@@ -2147,6 +2202,12 @@ a{
   gap: 1.25rem;
 }
 
+.\[\&\>div\]\:space-y-3>div > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .\[\&\>div\]\:text-center>div{
   text-align: center;
 }
@@ -2158,6 +2219,28 @@ a{
 .\[\&\>h3\]\:text-2xl>h3{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.\[\&\>h3\]\:text-xl>h3{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>img\]\:mx-auto>img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.\[\&\>img\]\:h-auto>img{
+  height: auto;
+}
+
+.\[\&\>img\]\:h-full>img{
+  height: 100%;
+}
+
+.\[\&\>img\]\:h-4\/5>img{
+  height: 80%;
 }
 
 .\[\&\>p\:last-child\]\:text-primary-color>p:last-child{
@@ -2187,6 +2270,27 @@ a{
   color: #ffff;
 }
 
+.\[\&_h3\]\:text-xl h3{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&_hr\]\:mx-auto hr{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px){
+  .md\:\[\&_hr\]\:mx-0 hr{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:\[\&_hr\]\:ml-auto hr{
+    margin-left: auto;
+  }
+}
+
 .\[\&_i\]\:text-light_color i{
   color: #ffff;
 }
@@ -2198,6 +2302,21 @@ a{
 
 .\[\&_img\]\:h-\[130px\] img{
   height: 130px;
+}
+
+@media (min-width: 768px){
+  .md\:\[\&_img\]\:mx-0 img{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:\[\&_img\]\:ml-auto img{
+    margin-left: auto;
+  }
+
+  .md\:\[\&_img\]\:ml-0 img{
+    margin-left: 0px;
+  }
 }
 
 .\[\&_span\]\:flex span{
